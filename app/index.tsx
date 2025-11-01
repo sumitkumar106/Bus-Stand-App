@@ -21,7 +21,6 @@ import {
   TouchableOpacity,
   StyleSheet,
   ScrollView,
-  Image,
   FlatList,
   Platform,
 } from 'react-native';
