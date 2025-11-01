@@ -307,11 +307,7 @@ export default function HomeScreen() {
           {/* To Stand Input */}
           <View style={styles.inputContainer}>
             <View style={styles.inputWrapper}>
-              <Image
-                source={require('../assets/images/to-bus.png')}
-                style={styles.inputIcon}
-                resizeMode="contain"
-              />
+              <Text style={styles.inputIcon}>🎯</Text>
               <TextInput
                 style={styles.input}
                 placeholder="To Stand"
