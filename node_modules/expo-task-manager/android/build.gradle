@@ -1,0 +1,24 @@
+apply plugin: 'com.android.library'
+
+group = 'host.exp.exponent'
+version = '11.8.2'
+
+def expoModulesCorePlugin = new File(project(":expo-modules-core").projectDir.absolutePath, "ExpoModulesCorePlugin.gradle")
+apply from: expoModulesCorePlugin
+applyKotlinExpoModulesCorePlugin()
+useCoreDependencies()
+useDefaultAndroidSdkVersions()
+useExpoPublishing()
+
+android {
+  namespace "expo.modules.taskManager"
+  defaultConfig {
+    versionCode 23
+    versionName "11.8.2"
+  }
+}
+
+dependencies {
+  implementation project(':unimodules-app-loader')
+  api "androidx.core:core:1.0.0"
+}
