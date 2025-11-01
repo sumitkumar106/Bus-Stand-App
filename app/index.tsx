@@ -463,8 +463,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
   },
   inputIcon: {
-    width: 24,
-    height: 24,
+    fontSize: 24,
     marginRight: 12,
   },
   input: {
