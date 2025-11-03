@@ -1,17 +1,4 @@
 /**
- * Expo Push Notifications Configuration
- *
- * Expert-level notification setup with:
- * - Expo project configuration
- * - Push notification permissions
- * - Local notifications
- * - Background notifications
- * - Error handling
- *
- * Created by Senior React Native Developer (10+ years experience)
- */
-
-/**
  * Expo Push Notifications Configuration - Expert Level
  *
  * Senior React Native Developer (10+ years experience)
