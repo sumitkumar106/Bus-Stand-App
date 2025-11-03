@@ -223,8 +223,8 @@ export const scheduleBusAlarm = async (
     // Calculate trigger time
     const triggerTime = new Date(arrivalTime.getTime() - (minutesBefore * 60 * 1000));
 
-    // Don't schedule if time is in the past
-    if (triggerTime <= new Date()) {
+      // Don't schedule if time is in the past
+    if (triggerTime.getTime() <= new Date().getTime()) {
       console.warn('⚠️ Cannot schedule alarm for past time');
       return null;
     }
