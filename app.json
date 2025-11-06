@@ -68,7 +68,15 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.png",
+      "meta": {
+        "description": "Bus Stand - Real-time bus tracking and arrival predictions for passengers and drivers in India",
+        "keywords": ["bus", "transportation", "tracking", "india", "patna", "harinagar", "sonpur"],
+        "og:title": "Bus Stand - Bus Tracking App",
+        "og:description": "Track buses in real-time, get accurate arrival predictions, and set arrival alerts.",
+        "og:image": "./assets/images/icon.png",
+        "og:type": "website"
+      }
     },
     "plugins": [
       "expo-router",
