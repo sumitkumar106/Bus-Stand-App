@@ -22,7 +22,13 @@
       "googleMobileAdsAppId": "ca-app-pub-6801510207917997~4471324247",
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "Allow Bus Stand to use your location for real-time bus tracking and accurate arrival predictions.",
-        "NSLocationAlwaysAndWhenInUseUsageDescription": "Allow Bus Stand to use your location for real-time bus tracking and accurate arrival predictions."
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Allow Bus Stand to use your location for real-time bus tracking and accurate arrival predictions.",
+        "NSMotionUsageDescription": "This app uses motion data to enhance the user experience with smooth animations and better navigation."
+      },
+      "statusBar": {
+        "hidden": false,
+        "translucent": false,
+        "style": "default"
       }
     },
     "android": {
