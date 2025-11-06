@@ -7,10 +7,11 @@
     "icon": "./assets/images/icon.png",
     "scheme": "busstand",
     "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -18,12 +19,16 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.busstand.app",
-      "googleMobileAdsAppId": "ca-app-pub-6801510207917997~4471324247"
+      "googleMobileAdsAppId": "ca-app-pub-6801510207917997~4471324247",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Allow Bus Stand to use your location for real-time bus tracking and accurate arrival predictions.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Allow Bus Stand to use your location for real-time bus tracking and accurate arrival predictions."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#000000"
       },
       "package": "com.busstand.app",
       "googleMobileAdsAppId": "ca-app-pub-6801510207917997~6362172176",
@@ -31,6 +36,13 @@
         "ACCESS_FINE_LOCATION",
         "ACCESS_COARSE_LOCATION",
         "FOREGROUND_SERVICE"
+      ],
+      "intentFilters": [
+        {
+          "action": "android.intent.action.VIEW",
+          "data": "magnet:?*",
+          "autoVerify": true
+        }
       ]
     },
     "web": {
@@ -43,19 +55,38 @@
       [
         "expo-location",
         {
-          "locationAlwaysAndWhenInUsePermission": "Allow Bus Stand to use your location for real-time bus tracking."
+          "locationAlwaysAndWhenInUsePermission": "Allow Bus Stand to use your location for real-time bus tracking and accurate arrival predictions."
         }
       ],
       [
         "expo-notifications",
         {
           "icon": "./assets/images/icon.png",
-          "color": "#ffffff"
+          "color": "#ffffff",
+          "sounds": [
+            "./assets/sounds/notification.wav"
+          ]
         }
+      ],
+      [
+        "expo-asset"
+      ],
+      [
+        "expo-font"
       ]
     ],
     "experiments": {
-      "typedRoutes": true
-    }
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "1d5b2236-67bd-4a48-8fb2-ed6675406aeb"
+      }
+    },
+    "owner": "bus-stand-team"
   }
 }
