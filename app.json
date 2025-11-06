@@ -37,19 +37,33 @@
         "backgroundColor": "#000000"
       },
       "package": "com.busstand.app",
+      "versionCode": 1,
+      "minSdkVersion": 21,
+      "targetSdkVersion": 34",
       "googleMobileAdsAppId": "ca-app-pub-6801510207917997~6362172176",
       "permissions": [
         "ACCESS_FINE_LOCATION",
         "ACCESS_COARSE_LOCATION",
-        "FOREGROUND_SERVICE"
+        "FOREGROUND_SERVICE",
+        "VIBRATE",
+        "WAKE_LOCK"
       ],
       "intentFilters": [
         {
           "action": "android.intent.action.VIEW",
           "data": "magnet:?*",
           "autoVerify": true
+        },
+        {
+          "action": "android.intent.action.WEB_SEARCH"
         }
-      ]
+      ],
+      "config": {
+        "googleMobileAds": {
+          "sameAppKey": true,
+          "sameAppKeyEnabled": true
+        }
+      }
     },
     "web": {
       "bundler": "metro",
