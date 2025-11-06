@@ -109,12 +109,12 @@
       "typedRoutes": true
     },
     "extra": {
-      "router": {
-        "origin": false
-      },
       "eas": {
         "projectId": "1d5b2236-67bd-4a48-8fb2-ed6675406aeb"
-      }
+      },
+      "plugins": [
+        "expo-font"
+      ]
     },
     "owner": "bus-stand-team"
   }
