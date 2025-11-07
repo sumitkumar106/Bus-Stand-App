@@ -244,6 +244,7 @@ export const scheduleBusAlarm = async (
         priority: Notifications.AndroidNotificationPriority.HIGH,
       },
       trigger: {
+        type: Notifications.SchedulableTriggerInputTypes.DATE,
         date: triggerTime.getTime(),
       },
     });
