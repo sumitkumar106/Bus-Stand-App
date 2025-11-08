@@ -127,7 +127,7 @@ export const configureNotificationHandlers = (): void => {
         shouldShowAlert: config.permissions.alert,
         shouldPlaySound: config.permissions.sound,
         shouldSetBadge: config.permissions.badge,
-      };
+      } as Notifications.NotificationBehavior;
     },
   });
 
