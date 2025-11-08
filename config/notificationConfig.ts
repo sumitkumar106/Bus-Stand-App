@@ -123,11 +123,11 @@ export const configureNotificationHandlers = (): void => {
     handleNotification: async (notification) => {
       const config = getNotificationConfig();
 
-      return {
+      return Promise.resolve({
         shouldShowAlert: config.permissions.alert,
         shouldPlaySound: config.permissions.sound,
         shouldSetBadge: config.permissions.badge,
-      };
+      });
     },
   });
 
