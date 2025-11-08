@@ -120,14 +120,14 @@ const getNotificationConfig = (): NotificationConfig => {
 export const configureNotificationHandlers = (): void => {
   // Set notification handler for when notifications are received while app is in foreground
   Notifications.setNotificationHandler({
-    handleNotification: async (notification) => {
+    handleNotification: async () => {
       const config = getNotificationConfig();
 
-      return Promise.resolve({
+      return {
         shouldShowAlert: config.permissions.alert,
         shouldPlaySound: config.permissions.sound,
         shouldSetBadge: config.permissions.badge,
-      });
+      };
     },
   });
 
