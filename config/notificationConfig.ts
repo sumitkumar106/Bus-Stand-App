@@ -126,6 +126,8 @@ export const configureNotificationHandlers = (): void => {
         shouldPlaySound: true,
         shouldSetBadge: true,
         priority: Notifications.AndroidNotificationPriority.HIGH,
+        staysActiveInBackground: false,
+        autoDismiss: true,
       };
     },
   });
