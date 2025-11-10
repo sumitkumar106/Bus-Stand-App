@@ -120,16 +120,11 @@ const getNotificationConfig = (): NotificationConfig => {
 export const configureNotificationHandlers = (): void => {
   // Set notification handler for when notifications are received while app is in foreground
   Notifications.setNotificationHandler({
-    handleNotification: async (): Promise<Notifications.NotificationBehavior> => {
-      return {
-        shouldShowAlert: true,
-        shouldPlaySound: true,
-        shouldSetBadge: true,
-        priority: Notifications.AndroidNotificationPriority.HIGH,
-        staysActiveInBackground: false,
-        autoDismiss: true,
-      };
-    },
+    handleNotification: async () => ({
+      shouldShowAlert: true,
+      shouldPlaySound: true,
+      shouldSetBadge: true,
+    }),
   });
 
   console.log('🔔 Notification handlers configured');
