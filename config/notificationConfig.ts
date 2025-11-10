@@ -121,12 +121,11 @@ export const configureNotificationHandlers = (): void => {
   // Set notification handler for when notifications are received while app is in foreground
   Notifications.setNotificationHandler({
     handleNotification: async () => {
-      const behavior: Notifications.NotificationBehavior = {
+      return {
         shouldShowAlert: true,
         shouldPlaySound: true,
         shouldSetBadge: true,
       };
-      return behavior;
     },
   });
 
